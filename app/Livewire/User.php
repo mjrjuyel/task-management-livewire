@@ -22,6 +22,7 @@ class User extends Component
     public function insert(){
        \App\Models\User::create([
         'name'=>$this->name,
+        
         'email'=>$this->email,
         'password'=>Hash::make($this->password),
        ]);
