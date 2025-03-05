@@ -9,6 +9,7 @@ Route::view('dashboard', 'dashboard')->middleware(['auth', 'verified'])->name('d
 
 Route::middleware('auth')->group(function(){
      Route::get('/user_list',[ChatController::class,'index'])->name('user_list');
+     Route::get('/chat/{id}',[ChatController::class,'chat'])->name('chat');
 });
 
 Route::view('profile', 'profile')
